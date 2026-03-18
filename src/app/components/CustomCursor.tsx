@@ -5,7 +5,6 @@ import gsap from "gsap";
 export default function CustomCursor() {
   const dotRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
-  const trailsRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
     const dot = dotRef.current;
