@@ -1,86 +1,48 @@
+# Harsh Dubey — Developer Portfolio
 
-# 🌐 Abdul Basit — Personal Portfolio
-
-Welcome to my **developer portfolio** built with **Next.js 15**, **Tailwind CSS**, and modern web tools. This site showcases my journey, skills, and projects — all wrapped in a sleek, animated, and responsive UI.
-
----
-## 📸 Screenshot
-
-![Homepage of Abdul Basit’s Portfolio](public/Website-overview.png)
----
-## 🚀 Live Demo
-
-🔗 [Visit Portfolio Website](https://abdul-basit-portfolio-website.vercel.app/)
+A modern, fully responsive developer portfolio built with **Next.js 15**, **Tailwind CSS**, and **TypeScript**. Showcasing my projects, skills, and experience as a Full Stack Developer.
 
 ---
 
-## 🧠 Tech Stack
+## Live Demo
 
-- ⚡ **Framework**: [Next.js 15](https://nextjs.org/)
-- 🎨 **Styling**: [Tailwind CSS 3](https://tailwindcss.com/)
-- 💻 **TypeScript**: Fully typed components & utilities
-- 🧩 **Animations**: [Lottie React](https://www.npmjs.com/package/lottie-react)
-- 📧 **Contact**: [EmailJS](https://www.emailjs.com/) integration
-- 📦 **PWA Ready**: Uses [`@ducanh2912/next-pwa`](https://www.npmjs.com/package/@ducanh2912/next-pwa)
-- 🔐 **reCAPTCHA v3**: [Google reCAPTCHA](https://www.npmjs.com/package/react-google-recaptcha)
-- 🧠 **Icons**: [Lucide](https://lucide.dev/), [React Icons](https://react-icons.github.io/)
-- ✅ **Prettier + ESLint**: Enforced code style & formatting
-- 🧪 **Husky**: Git hooks for pre-commit checks
+[harshduby.vercel.app](https://harshduby.vercel.app) ← _(update this with your actual Vercel URL)_
 
 ---
 
-## 📁 Folder Structure
+## Tech Stack
 
-```
-ghost-oo5-personal-portfolio-website/
-├── public/                  # Static assets, Lottie, images, icons
-├── src/app/
-│   ├── components/          # Reusable UI & page sections
-│   ├── pages/               # Page-specific components (About, Projects, etc.)
-│   ├── css/                 # Custom CSS (e.g., card effects)
-│   ├── fonts/               # Custom fonts
-├── utils/                   # Helper functions & data (skills, projects, etc.)
-├── .husky/                  # Git pre-commit hook
-├── tailwind.config.ts       # Tailwind theme configuration
-├── next.config.ts           # Next.js + PWA configuration
-```
+- **Framework** — Next.js 15 (App Router)
+- **Language** — TypeScript
+- **Styling** — Tailwind CSS
+- **Animations** — GSAP + Lottie
+- **Contact Form** — EmailJS
+- **Icons** — Lucide, React Icons
+- **Code Quality** — ESLint, Prettier, Husky
 
 ---
 
-## 🛠️ Getting Started
-
-### 1. Clone this repo
+## Getting Started
 
 ```bash
-git clone https://github.com/your-username/your-portfolio.git
-cd your-portfolio
-```
+# Clone the repo
+git clone https://github.com/harshdazz/Portfolio.git
+cd Portfolio
 
-### 2. Install dependencies
-
-```bash
+# Install dependencies
 pnpm install
-# or
-npm install
-# or
-yarn install
-```
 
-### 3. Run the development server
-
-```bash
+# Start dev server
 pnpm dev
-# or
-npm run dev
 ```
 
-Then visit: [http://localhost:3000](http://localhost:3000)
+Visit [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## 🧪 Environment Variables
+## Environment Variables
 
-Copy `.env.example` and create `.env.local`:
+Create a `.env.local` file:
 
 ```env
 NEXT_PUBLIC_EMAILJS_SERVICE_ID=
@@ -90,22 +52,22 @@ NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=
 
 ---
 
-## 📦 Deployment
-
-deployed  [here](https://abdul-basit-portfolio-website.vercel.app/)
-
----
-
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
-
----
-
-## 📬 Contact Me
-
-Got a project in mind or just want to say hi?
-
-📧 [rajaabdulbasit005@gmail.com](mailto:rajaabdulbasit005@gmail.com)  
+## Folder Structure
 
 ```
+├── public/              # Static assets (images, lottie, SVGs)
+├── src/app/
+│   ├── components/      # Page sections & UI components
+│   ├── css/             # Custom styles
+│   └── fonts/           # Custom fonts
+└── utils/
+    └── Data/            # Content data (projects, skills, experience)
+```
+
+---
+
+## Contact
+
+- **Email** — harshdazz4@gmail.com
+- **GitHub** — [github.com/harshdazz](https://github.com/harshdazz)
+- **LinkedIn** — [linkedin.com/in/harsh-dubey-b2b2b4395](https://www.linkedin.com/in/harsh-dubey-b2b2b4395)
