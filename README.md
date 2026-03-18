@@ -6,7 +6,7 @@ A modern, fully responsive developer portfolio built with **Next.js 15**, **Tail
 
 ## Live Demo
 
-[harshduby.vercel.app](https://harshduby.vercel.app) ← _(update this with your actual Vercel URL)_
+[harshduby.vercel.app](https://portfolio-kbqt.vercel.app/) ← _(update this with your actual Vercel URL)_
 
 ---
 
