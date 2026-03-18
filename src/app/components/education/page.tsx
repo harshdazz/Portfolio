@@ -8,7 +8,7 @@ function Education() {
   return (
     <div
       id="education"
-      className="relative z-50 py-16 lg:py-32 bg-[#050505] overflow-hidden"
+      className="relative z-50 py-16 lg:py-32 bg-[#030014] overflow-hidden"
     >
       {/* Decorative Background Blur */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-600/5 blur-[120px] rounded-full pointer-events-none" />
@@ -16,7 +16,7 @@ function Education() {
       <div className="flex justify-center mb-20 lg:mb-32">
         <div className="flex items-center">
           <span className="w-24 h-[2px] bg-gradient-to-r from-transparent to-red-600"></span>
-          <span className="bg-[#050505] border border-red-600/30 w-fit text-white p-3 px-8 text-2xl font-bold rounded-full shadow-[0_0_20px_rgba(220,38,38,0.2)]">
+          <span className="bg-[#030014] border border-red-600/30 w-fit text-white p-3 px-8 text-2xl font-bold rounded-full shadow-[0_0_20px_rgba(220,38,38,0.2)]">
             Academic Background
           </span>
           <span className="w-24 h-[2px] bg-gradient-to-l from-transparent to-red-600"></span>

@@ -1,5 +1,6 @@
 "use client";
 import { experiences } from "@/../utils/Data/experience";
+import ExperienceBackground from "@/app/components/backgrounds/ExperienceBackground";
 import { BsPersonWorkspace } from "react-icons/bs";
 import { Calendar, Building2, ChevronRight } from "lucide-react";
 import SectionReveal from "../SectionReveal";
@@ -10,13 +11,14 @@ function Experience() {
       id="experience"
       className="relative z-50 py-16 lg:py-32  overflow-hidden"
     >
+      <ExperienceBackground />
       {/* Decorative Background Blur */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-600/10 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="flex justify-center mb-20 lg:mb-32">
         <div className="flex items-center">
           <span className="w-24 h-[2px] bg-gradient-to-r from-transparent to-red-600"></span>
-          <span className="bg-[#050505] border border-red-600/30 w-fit text-white p-3 px-8 text-2xl font-bold rounded-full shadow-[0_0_20px_rgba(220,38,38,0.2)]">
+          <span className="bg-[#030014] border border-red-600/30 w-fit text-white p-3 px-8 text-2xl font-bold rounded-full shadow-[0_0_20px_rgba(220,38,38,0.2)]">
             Professional Journey
           </span>
           <span className="w-24 h-[2px] bg-gradient-to-l from-transparent to-red-600"></span>
@@ -35,7 +37,7 @@ function Experience() {
                   className={`flex flex-col md:flex-row items-center gap-8 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
                 >
                   {/* Timeline Dot */}
-                  <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 w-10 h-10 rounded-xl bg-[#050505] border-2 border-red-600 flex items-center justify-center z-10 shadow-[0_0_15px_rgba(220,38,38,0.5)]">
+                  <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 w-10 h-10 rounded-xl bg-[#030014] border-2 border-red-600 flex items-center justify-center z-10 shadow-[0_0_15px_rgba(220,38,38,0.5)]">
                     <BsPersonWorkspace className="text-red-600 w-5 h-5" />
                   </div>
 

@@ -7,14 +7,14 @@ import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Link as ScrollLink } from "react-scroll";
 
 const Footer = () => (
-  <footer className="bg-[#050505] border-t border-white/5 text-gray-200">
+  <footer className="bg-[#030014] border-t border-white/5 text-gray-200">
     <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-24">
         <div className="flex flex-col gap-6">
           <Link href="/" className="w-fit">
             <Image
               src="/logo.png"
-              alt="Abdul Basit Logo"
+              alt="Harsh Dubey Logo"
               width={100}
               height={100}
               className="brightness-125"
@@ -111,11 +111,11 @@ const Footer = () => (
       {/* Divider & Copyright */}
       <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
         <p>
-          &copy; {new Date().getFullYear()} Abdul Basit. All rights reserved.
+          &copy; {new Date().getFullYear()} Harsh Dubey. All rights reserved.
         </p>
         <p className="flex items-center gap-2">
           Made with <span className="text-red-600 animate-pulse">❤️</span> in
-          Pakistan
+          India
         </p>
       </div>
     </div>

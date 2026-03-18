@@ -208,7 +208,7 @@ const HeroSection = () => {
           >
             <div
               ref={codeCardRef}
-              className="relative rounded-3xl border border-white/10 bg-[#050505]/80 backdrop-blur-xl overflow-hidden shadow-2xl group"
+              className="relative rounded-3xl border border-white/10 bg-[#030014]/80 backdrop-blur-xl overflow-hidden shadow-2xl group"
             >
               {/* Card Header */}
               <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-white/5">
@@ -236,7 +236,7 @@ const HeroSection = () => {
                     <span className="text-slate-600 italic">02</span>
                     <p className="ml-4">
                       <span className="text-slate-200">name:</span>{" "}
-                      <span className="text-red-300">'Abdul Basit'</span>,
+                      <span className="text-red-300">'Harsh Dubey'</span>,
                     </p>
                   </div>
                   <div className="flex gap-4">

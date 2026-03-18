@@ -64,7 +64,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         }}
       />
 
-      <Card className="relative flex flex-col h-full justify-between border border-white/10 bg-[#050505]/20 backdrop-blur-xl rounded-2xl shadow-2xl overflow-hidden transition-all duration-500 hover:border-red-600/50 hover:shadow-red-600/10">
+      <Card className="relative flex flex-col h-full justify-between border border-white/10 bg-[#030014]/20 backdrop-blur-xl rounded-2xl shadow-2xl overflow-hidden transition-all duration-500 hover:border-red-600/50 hover:shadow-red-600/10">
         <div className="flex-1">
           <div className="relative overflow-hidden aspect-video">
             {project.videos?.[0] ? (
@@ -94,7 +94,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             )}
 
             {/* Overlay Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] to-transparent opacity-80" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#030014] to-transparent opacity-80" />
 
             {isNewProject(project.date) && (
               <div className="absolute top-4 right-4 bg-gradient-to-r from-red-600 to-red-900 text-white px-3 py-1 rounded-full flex items-center gap-1.5 shadow-lg animate-pulse z-10 border border-white/10">

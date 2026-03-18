@@ -1,5 +1,6 @@
 "use client";
 import { skillsData } from "@/../utils/Data/skills";
+import SkillsBackground from "@/app/components/backgrounds/SkillsBackground";
 import { getSkillIcon, getSkillColor } from "@/../utils/skill-icons";
 import Marquee from "react-fast-marquee";
 import SectionReveal from "../SectionReveal";
@@ -41,6 +42,7 @@ function Skills() {
 
   return (
     <div id="skills" className="relative z-50 py-24 lg:py-48 overflow-hidden ">
+      <SkillsBackground />
       {/* Dramatic Background Atmosphere */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-red-600/10 blur-[150px] rounded-full pointer-events-none" />
       <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-red-950/10 blur-[120px] rounded-full pointer-events-none" />

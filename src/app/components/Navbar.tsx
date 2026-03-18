@@ -1,6 +1,4 @@
 "use client";
-import img from "@/../public/logo.png";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -78,22 +76,22 @@ const Navbar = () => {
     <nav
       className={`sticky top-0 z-[9999] transition-all duration-500 ${
         isScrolled
-          ? "bg-[#050505]/80 backdrop-blur-xl border-b border-white/10 py-2"
+          ? "bg-[#030014]/80 backdrop-blur-xl border-b border-white/10 py-2"
           : "bg-transparent py-4"
       }`}
     >
       <div className="container flex items-center justify-between mx-auto px-4 lg:px-8">
         <Link
           href="/"
-          className="transition-transform duration-300 hover:scale-105"
+          className="transition-transform duration-300 hover:scale-105 group"
         >
-          <Image
-            src={img}
-            alt="Abdul Basit"
-            width={isScrolled ? 50 : 60}
-            height={isScrolled ? 50 : 60}
-            className="transition-all duration-500"
-          />
+          <span
+            className={`font-extrabold tracking-tight transition-all duration-500 bg-gradient-to-r from-white via-red-400 to-red-600 bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(220,38,38,0.5)] ${
+              isScrolled ? "text-xl" : "text-2xl"
+            }`}
+          >
+            Harsh<span className="text-red-500"> Dubey</span>
+          </span>
         </Link>
 
         {/* Desktop Menu */}
@@ -143,7 +141,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Dropdown */}
       {isMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-[#050505]/95 backdrop-blur-2xl border-b border-white/10 md:hidden animate-in slide-in-from-top duration-300">
+        <div className="absolute top-full left-0 w-full bg-[#030014]/95 backdrop-blur-2xl border-b border-white/10 md:hidden animate-in slide-in-from-top duration-300">
           <div className="container mx-auto px-6 py-8 flex flex-col space-y-2">
             {navItems.map((item) => renderLink(item, true))}
           </div>

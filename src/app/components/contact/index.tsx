@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import ContactBackground from "@/app/components/backgrounds/ContactBackground";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { FaFacebook, FaStackOverflow } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -59,6 +60,7 @@ const ContactInfoCard = ({
 function ContactSection() {
   return (
     <div id="contact" className="relative z-50 py-24 lg:py-48 overflow-hidden">
+      <ContactBackground />
       {/* Background Decorative Elements */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-red-500/10 blur-[150px] rounded-full pointer-events-none" />
 

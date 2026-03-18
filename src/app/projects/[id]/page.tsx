@@ -48,7 +48,7 @@ const ProjectDetails = async ({ params }: Props) => {
         </Link>
 
         {/* Hero Section */}
-        <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-[#050505] shadow-2xl mb-12">
+        <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-[#030014] shadow-2xl mb-12">
           <div className="absolute inset-0 z-0">
             <Image
               src={project.images?.[0] || "/placeholder/placeholder.png"}
@@ -56,7 +56,7 @@ const ProjectDetails = async ({ params }: Props) => {
               fill
               className="object-cover opacity-20 blur-sm scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#030014] via-transparent to-transparent" />
           </div>
 
           <div className="relative z-10 p-8 lg:p-16 flex flex-col lg:flex-row gap-12 items-center">
@@ -165,14 +165,14 @@ const ProjectDetails = async ({ params }: Props) => {
                   <CarouselContent>
                     {project.images.slice(1).map((image, index) => (
                       <CarouselItem key={index}>
-                        <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 group bg-[#050505]">
+                        <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 group bg-[#030014]">
                           <Image
                             src={image}
                             alt={`${project.name} Screenshot ${index + 1}`}
                             fill
                             className="object-cover transition-transform duration-700 group-hover:scale-110 shadow-2xl opacity-80 group-hover:opacity-100"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-60" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#030014] via-transparent to-transparent opacity-60" />
                         </div>
                       </CarouselItem>
                     ))}
@@ -187,7 +187,7 @@ const ProjectDetails = async ({ params }: Props) => {
           {/* Sidebar (Right) */}
           <aside className="flex flex-col gap-8">
             {/* Tech Stack Card */}
-            <Card className="bg-[#050505]/20 border-white/10 rounded-3xl overflow-hidden sticky top-24 shadow-2xl">
+            <Card className="bg-[#030014]/20 border-white/10 rounded-3xl overflow-hidden sticky top-24 shadow-2xl">
               <CardContent className="p-8 flex flex-col gap-8">
                 <div className="flex flex-col gap-6">
                   <div className="flex items-center gap-3">
