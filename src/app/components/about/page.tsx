@@ -66,13 +66,13 @@ function About() {
                   <User className="w-5 h-5 shadow-[0_0_15px_rgba(239,68,68,0.5)]" />
                 </div>
                 <span className="text-sm font-bold uppercase tracking-[0.3em]">
-                  Discovery
+                  Who I Am
                 </span>
               </div>
               <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
-                About{" "}
+                AI Full Stack{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-800">
-                  The Architect
+                  Developer
                 </span>
               </h2>
             </div>
@@ -144,7 +144,7 @@ function About() {
 
                   <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
                     <p className="text-white font-bold text-center tracking-widest uppercase text-xs">
-                      Built with Passion
+                      AI-Powered Developer
                     </p>
                   </div>
                 </div>

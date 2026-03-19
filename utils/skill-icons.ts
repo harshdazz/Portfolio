@@ -7,6 +7,7 @@ import {
   SiNextdotjs,
   SiTailwindcss,
   SiNodedotjs,
+  SiExpress,
   SiMongodb,
   SiMysql,
   SiFirebase,
@@ -17,103 +18,80 @@ import {
   SiCanva,
   SiAdobeillustrator,
   SiAdobephotoshop,
+  SiDocker,
+  SiVercel,
+  SiGooglegemini,
+  SiOpenai,
+  SiLangchain,
+  SiStripe,
+  SiClerk,
+  SiPostman,
   SiFreelancer,
 } from "react-icons/si";
 import { IconType } from "react-icons";
 
 export const getSkillIcon = (skill: string): IconType => {
-  const skillLower = skill.toLowerCase();
+  const s = skill.toLowerCase();
 
-  switch (skillLower) {
-    case "html":
-      return SiHtml5;
-    case "css":
-      return SiCss3;
-    case "javascript":
-      return SiJavascript;
-    case "js":
-      return SiJavascript;
-    case "typescript":
-      return SiTypescript;
-    case "ts":
-      return SiTypescript;
-    case "react":
-      return SiReact;
-    case "next js":
-    case "nextjs":
-    case "next.js":
-      return SiNextdotjs;
-    case "tailwind":
-    case "tailwindcss":
-      return SiTailwindcss;
-    case "node js":
-    case "nodejs":
-    case "node.js":
-      return SiNodedotjs;
-    case "mongodb":
-      return SiMongodb;
-    case "mysql":
-      return SiMysql;
-    case "firebase":
-      return SiFirebase;
-    case "git":
-      return SiGit;
-    case "figma":
-      return SiFigma;
-    case "bootstrap":
-      return SiBootstrap;
-    case "materialui":
-    case "mui":
-      return SiMui;
-    case "canva":
-      return SiCanva;
-    case "illustrator":
-      return SiAdobeillustrator;
-    case "photoshop":
-      return SiAdobephotoshop;
-    default:
-      return SiFreelancer; // Fallback icon
-  }
+  if (s.includes("html")) return SiHtml5;
+  if (s.includes("css") && !s.includes("tailwind")) return SiCss3;
+  if (s.includes("tailwind")) return SiTailwindcss;
+  if (s.includes("javascript") || s === "js") return SiJavascript;
+  if (s.includes("typescript") || s === "ts") return SiTypescript;
+  if (s.includes("react")) return SiReact;
+  if (s.includes("next")) return SiNextdotjs;
+  if (s.includes("express")) return SiExpress;
+  if (s.includes("node")) return SiNodedotjs;
+  if (s.includes("mongodb")) return SiMongodb;
+  if (s.includes("mysql")) return SiMysql;
+  if (s.includes("firebase")) return SiFirebase;
+  if (s.includes("docker")) return SiDocker;
+  if (s.includes("git")) return SiGit;
+  if (s.includes("figma")) return SiFigma;
+  if (s.includes("bootstrap")) return SiBootstrap;
+  if (s.includes("material") || s.includes("mui")) return SiMui;
+  if (s.includes("canva")) return SiCanva;
+  if (s.includes("illustrator")) return SiAdobeillustrator;
+  if (s.includes("photoshop")) return SiAdobephotoshop;
+  if (s.includes("vercel")) return SiVercel;
+  if (s.includes("gemini")) return SiGooglegemini;
+  if (s.includes("openai")) return SiOpenai;
+  if (s.includes("langchain")) return SiLangchain;
+  if (s.includes("stripe")) return SiStripe;
+  if (s.includes("clerk")) return SiClerk;
+  if (s.includes("rest") || s.includes("api")) return SiPostman;
+
+  return SiFreelancer;
 };
 
 export const getSkillColor = (skill: string): string => {
-  const skillLower = skill.toLowerCase();
-  switch (skillLower) {
-    case "html":
-      return "#ef4444"; // Red-500
-    case "css":
-      return "#dc2626"; // Red-600
-    case "javascript":
-      return "#b91c1c"; // Red-700
-    case "typescript":
-      return "#ef4444"; // Red-500
-    case "react":
-      return "#dc2626"; // Red-600
-    case "next js":
-    case "nextjs":
-    case "next.js":
-      return "#ffffff"; // Keep white for contrast
-    case "tailwind":
-      return "#991b1b"; // Red-800
-    case "node js":
-    case "nodejs":
-      return "#b91c1c"; // Red-700
-    case "mongodb":
-      return "#7f1d1d"; // Red-900
-    case "mysql":
-      return "#991b1b"; // Red-800
-    case "firebase":
-      return "#ef4444"; // Red-500
-    case "git":
-      return "#dc2626"; // Red-600
-    case "figma":
-      return "#b91c1c"; // Red-700
-    case "bootstrap":
-      return "#991b1b"; // Red-800
-    case "materialui":
-    case "mui":
-      return "#ef4444"; // Red-500
-    default:
-      return "#ef4444"; // Default Red
-  }
+  const s = skill.toLowerCase();
+
+  if (s.includes("html")) return "#E34F26";
+  if (s.includes("css") && !s.includes("tailwind")) return "#1572B6";
+  if (s.includes("tailwind")) return "#06B6D4";
+  if (s.includes("javascript") || s === "js") return "#F7DF1E";
+  if (s.includes("typescript") || s === "ts") return "#3178C6";
+  if (s.includes("react")) return "#61DAFB";
+  if (s.includes("next")) return "#ffffff";
+  if (s.includes("express")) return "#ffffff";
+  if (s.includes("node")) return "#339933";
+  if (s.includes("mongodb")) return "#47A248";
+  if (s.includes("mysql")) return "#4479A1";
+  if (s.includes("firebase")) return "#FFCA28";
+  if (s.includes("docker")) return "#2496ED";
+  if (s.includes("git")) return "#F05032";
+  if (s.includes("figma")) return "#F24E1E";
+  if (s.includes("bootstrap")) return "#7952B3";
+  if (s.includes("material") || s.includes("mui")) return "#007FFF";
+  if (s.includes("canva")) return "#00C4CC";
+  if (s.includes("vercel")) return "#ffffff";
+  if (s.includes("gemini")) return "#4285F4";
+  if (s.includes("openai")) return "#10A37F";
+  if (s.includes("langchain")) return "#1C3C3C";
+  if (s.includes("stripe")) return "#635BFF";
+  if (s.includes("clerk")) return "#6C47FF";
+  if (s.includes("rest") || s.includes("api")) return "#FF6C37";
+
+  return "#ef4444";
 };

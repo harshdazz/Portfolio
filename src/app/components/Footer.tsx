@@ -114,8 +114,8 @@ const Footer = () => (
           &copy; {new Date().getFullYear()} Harsh Dubey. All rights reserved.
         </p>
         <p className="flex items-center gap-2">
-          Made with <span className="text-red-600 animate-pulse">❤️</span> in
-          India
+          Made with <span className="text-red-600 animate-pulse">❤️</span> by
+          Harsh
         </p>
       </div>
     </div>

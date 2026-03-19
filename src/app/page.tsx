@@ -2,6 +2,7 @@ import About from "./components/about/page";
 import Contact from "./components/contact/index";
 import Experience from "./components/experience/page";
 import HeroSection from "./components/hero-section/page";
+import Integrations from "./components/integrations/page";
 import Projects from "./components/projects/index";
 import Skills from "./components/skills/page";
 import SectionReveal from "./components/SectionReveal";
@@ -23,6 +24,10 @@ export default function Home() {
 
         <SectionReveal>
           <Skills />
+        </SectionReveal>
+
+        <SectionReveal>
+          <Integrations />
         </SectionReveal>
 
         <SectionReveal>

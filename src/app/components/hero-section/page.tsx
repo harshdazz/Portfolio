@@ -137,8 +137,8 @@ const HeroSection = () => {
                 {personalData.designation}
               </span>
               <br />
-              dedicated to building high-performance, user-centric web
-              applications.
+              building intelligent, AI-powered web applications that ship to
+              production.
             </p>
           </div>
 
@@ -243,7 +243,7 @@ const HeroSection = () => {
                     <span className="text-slate-600 italic">03</span>
                     <p className="ml-4">
                       <span className="text-slate-200">focus:</span>{" "}
-                      <span className="text-red-300">'Fullstack Mastery'</span>,
+                      <span className="text-red-300">'AI + Fullstack'</span>,
                     </p>
                   </div>
                   <div className="flex gap-4">
@@ -251,7 +251,7 @@ const HeroSection = () => {
                     <p className="ml-4">
                       <span className="text-slate-200">skills:</span> [
                       <span className="text-red-300">
-                        'NextJS', 'GSAP', 'AI'
+                        'NextJS', 'OpenAI', 'LangChain'
                       </span>
                       ],
                     </p>
@@ -267,7 +267,9 @@ const HeroSection = () => {
                     <span className="text-slate-600 italic">06</span>
                     <p className="ml-4">
                       <span className="text-slate-200">motto:</span>{" "}
-                      <span className="text-red-400">"Build with Purpose"</span>
+                      <span className="text-red-400">
+                        "Build Smarter with AI"
+                      </span>
                     </p>
                   </div>
                   <div className="flex gap-4">
