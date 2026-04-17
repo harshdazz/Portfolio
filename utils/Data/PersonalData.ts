@@ -9,7 +9,7 @@ export const personalData = {
     "Full Stack + AI.",
   ],
   description:
-    "I’m Harsh Dubey, an AI-powered Full Stack Developer who builds intelligent, production-grade web applications — end to end. From AI-driven features and LLM integrations to auth flows and scalable APIs, I work across the full stack with a focus on embedding AI where it creates real impact. Currently seeking a full-stack AI developer role where I can ship smart products, move fast, and build things that matter.",
+    "I’m Harsh Dubey, an AI-powered Full Stack Developer who builds intelligent, production-grade web applications — end to end. From AI-driven features and LLM integrations to auth flows and scalable APIs, I work across the full stack with a focus on embedding AI where it creates real impact.",
   email: "harshdazz4@gmail.com",
   phone: "+91-6387550457",
   address: "India",
