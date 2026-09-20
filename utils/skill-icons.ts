@@ -8,7 +8,6 @@ import {
   SiTailwindcss,
   SiNodedotjs,
   SiExpress,
-  SiMongodb,
   SiMysql,
   SiFirebase,
   SiGit,
@@ -19,12 +18,8 @@ import {
   SiAdobeillustrator,
   SiAdobephotoshop,
   SiDocker,
-  SiVercel,
-  SiGooglegemini,
   SiOpenai,
   SiLangchain,
-  SiStripe,
-  SiClerk,
   SiPostman,
   SiFreelancer,
 } from "react-icons/si";
@@ -42,7 +37,6 @@ export const getSkillIcon = (skill: string): IconType => {
   if (s.includes("next")) return SiNextdotjs;
   if (s.includes("express")) return SiExpress;
   if (s.includes("node")) return SiNodedotjs;
-  if (s.includes("mongodb")) return SiMongodb;
   if (s.includes("mysql")) return SiMysql;
   if (s.includes("firebase")) return SiFirebase;
   if (s.includes("docker")) return SiDocker;
@@ -53,12 +47,8 @@ export const getSkillIcon = (skill: string): IconType => {
   if (s.includes("canva")) return SiCanva;
   if (s.includes("illustrator")) return SiAdobeillustrator;
   if (s.includes("photoshop")) return SiAdobephotoshop;
-  if (s.includes("vercel")) return SiVercel;
-  if (s.includes("gemini")) return SiGooglegemini;
   if (s.includes("openai")) return SiOpenai;
   if (s.includes("langchain")) return SiLangchain;
-  if (s.includes("stripe")) return SiStripe;
-  if (s.includes("clerk")) return SiClerk;
   if (s.includes("rest") || s.includes("api")) return SiPostman;
 
   return SiFreelancer;
@@ -76,7 +66,6 @@ export const getSkillColor = (skill: string): string => {
   if (s.includes("next")) return "#ffffff";
   if (s.includes("express")) return "#ffffff";
   if (s.includes("node")) return "#339933";
-  if (s.includes("mongodb")) return "#47A248";
   if (s.includes("mysql")) return "#4479A1";
   if (s.includes("firebase")) return "#FFCA28";
   if (s.includes("docker")) return "#2496ED";
@@ -85,12 +74,8 @@ export const getSkillColor = (skill: string): string => {
   if (s.includes("bootstrap")) return "#7952B3";
   if (s.includes("material") || s.includes("mui")) return "#007FFF";
   if (s.includes("canva")) return "#00C4CC";
-  if (s.includes("vercel")) return "#ffffff";
-  if (s.includes("gemini")) return "#4285F4";
   if (s.includes("openai")) return "#10A37F";
   if (s.includes("langchain")) return "#1C3C3C";
-  if (s.includes("stripe")) return "#635BFF";
-  if (s.includes("clerk")) return "#6C47FF";
   if (s.includes("rest") || s.includes("api")) return "#FF6C37";
 
   return "#ef4444";

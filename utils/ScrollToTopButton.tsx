@@ -7,34 +7,33 @@ const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      setIsVisible(window.scrollY > 200); // Show when scrolled down 200px
+    let frame = 0;
+    const onScroll = () => {
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        frame = 0;
+        setIsVisible(window.scrollY > 200);
+      });
     };
 
-    // Listen for scroll events
-    window.addEventListener("scroll", toggleVisibility);
-
-    // Cleanup listener on unmount
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => {
-      window.removeEventListener("scroll", toggleVisibility);
+      window.removeEventListener("scroll", onScroll);
+      if (frame) cancelAnimationFrame(frame);
     };
   }, []);
 
-  // Scroll animation when the button is clicked
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // Smooth scroll animation
-    });
-  };
-
   return (
     <button
-      className={`fixed bottom-4 right-4 z-50 rounded-full bg-pink-500 text-white p-3 shadow-xl  duration-300 ${
+      type="button"
+      className={`fixed bottom-4 right-4 z-50 rounded-full bg-gradient-to-r from-red-600 to-red-900 text-white p-3 shadow-xl transition-opacity duration-300 ${
         isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
-      onClick={scrollToTop}
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       aria-label="Scroll to top"
+      aria-hidden={!isVisible}
+      tabIndex={isVisible ? 0 : -1}
     >
       <ChevronUp className="w-6 h-6" />
     </button>

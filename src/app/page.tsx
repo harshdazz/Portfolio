@@ -1,43 +1,40 @@
-import About from "./components/about/page";
-import Contact from "./components/contact/index";
-import Experience from "./components/experience/page";
-import HeroSection from "./components/hero-section/page";
-import Integrations from "./components/integrations/page";
-import Projects from "./components/projects/index";
-import Skills from "./components/skills/page";
+import About from "./components/about/About";
+import Contact from "./components/contact/Contact";
+import Experience from "./components/experience/Experience";
+import HeroSection from "./components/hero-section/HeroSection";
+import Integrations from "./components/integrations/Integrations";
+import Projects from "./components/projects/Projects";
+import Skills from "./components/skills/Skills";
 import SectionReveal from "./components/SectionReveal";
 
-import "./css/card.css";
 export default function Home() {
   return (
-    <>
-      <div className="container">
-        <HeroSection />
+    <div className="container">
+      <HeroSection />
 
-        <SectionReveal>
-          <About />
-        </SectionReveal>
+      <SectionReveal>
+        <About />
+      </SectionReveal>
 
-        <SectionReveal>
-          <Experience />
-        </SectionReveal>
+      <SectionReveal>
+        <Experience />
+      </SectionReveal>
 
-        <SectionReveal>
-          <Skills />
-        </SectionReveal>
+      <SectionReveal>
+        <Skills />
+      </SectionReveal>
 
-        <SectionReveal>
-          <Integrations />
-        </SectionReveal>
+      <SectionReveal>
+        <Integrations />
+      </SectionReveal>
 
-        <SectionReveal>
-          <Projects />
-        </SectionReveal>
+      <SectionReveal>
+        <Projects />
+      </SectionReveal>
 
-        <SectionReveal>
-          <Contact />
-        </SectionReveal>
-      </div>
-    </>
+      <SectionReveal>
+        <Contact />
+      </SectionReveal>
+    </div>
   );
 }

@@ -18,7 +18,7 @@ export const projectsData = [
     code: "https://github.com/harshdazz",
     demo: "",
     date: "2024",
-    images: ["/placeholder/placeholder.png"],
+    images: ["/placeholder/placeholder.webp"],
     videos: [""],
     highlights: [
       "Stripe payment processing with secure checkout flow.",
@@ -49,7 +49,7 @@ export const projectsData = [
     code: "https://github.com/harshdazz",
     demo: "https://ai-mock-interview-react-d2314.web.app/generate",
     date: "2024",
-    images: ["/placeholder/placeholder.png"],
+    images: ["/placeholder/placeholder.webp"],
     videos: [""],
     highlights: [
       "Google Gemini AI integration for dynamic question generation.",
@@ -73,7 +73,7 @@ export const projectsData = [
     code: "https://github.com/harshdazz",
     demo: "",
     date: "2024",
-    images: ["/placeholder/placeholder.png"],
+    images: ["/placeholder/placeholder.webp"],
     videos: [""],
     highlights: [
       "Full product catalog with filtering and search.",

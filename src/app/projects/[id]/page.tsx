@@ -1,5 +1,5 @@
 import { projectsData } from "@/../utils/Data/projects-data";
-import FeaturedProjects from "@/app/components/projects/_components/FeaturedProjects";
+import FeaturedProjects from "@/app/components/projects/FeaturedProjects";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -27,6 +27,11 @@ type Props = {
   params: Promise<{ id: string }>;
 };
 
+/** Prerender every project detail page at build time. */
+export function generateStaticParams() {
+  return projectsData.map((project) => ({ id: String(project.id) }));
+}
+
 const ProjectDetails = async ({ params }: Props) => {
   const { id } = await params;
   const project = projectsData.find((p) => p.id === parseInt(id));
@@ -51,7 +56,7 @@ const ProjectDetails = async ({ params }: Props) => {
         <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-[#030014] shadow-2xl mb-12">
           <div className="absolute inset-0 z-0">
             <Image
-              src={project.images?.[0] || "/placeholder/placeholder.png"}
+              src={project.images?.[0] || "/placeholder/placeholder.webp"}
               alt={project.name}
               fill
               className="object-cover opacity-20 blur-sm scale-110"
@@ -63,7 +68,7 @@ const ProjectDetails = async ({ params }: Props) => {
             {/* Project Banner Image */}
             <div className="w-full lg:w-1/2 aspect-video relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
               <Image
-                src={project.images?.[0] || "/placeholder/placeholder.png"}
+                src={project.images?.[0] || "/placeholder/placeholder.webp"}
                 alt={project.name}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
