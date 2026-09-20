@@ -4,49 +4,30 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Harsh Dubey Portfolio",
     short_name: "Harsh Dubey",
-    description: "A portfolio Progressive Web App built by Harsh Dubey",
+    description:
+      "Portfolio of Harsh Dubey — Full Stack & AI Developer building production-grade web applications.",
     start_url: "/",
     display: "standalone",
-    background_color: "#000000",
-    theme_color: "#000000",
+    background_color: "#030014",
+    theme_color: "#030014",
     icons: [
       {
-        src: "/Pwa-logos/new-icons/manifest-icon-192.maskable.png",
+        src: "/icons/icon-192.png",
         sizes: "192x192",
         type: "image/png",
         purpose: "any",
       },
       {
-        src: "/Pwa-logos/new-icons/manifest-icon-192.maskable.png",
-        sizes: "192x192",
-        type: "image/png",
-        purpose: "maskable",
-      },
-      {
-        src: "/Pwa-logos/new-icons/manifest-icon-512.maskable.png",
+        src: "/icons/icon-512.png",
         sizes: "512x512",
         type: "image/png",
         purpose: "any",
       },
       {
-        src: "/Pwa-logos/new-icons/manifest-icon-512.maskable.png",
+        src: "/icons/icon-maskable-512.png",
         sizes: "512x512",
         type: "image/png",
         purpose: "maskable",
-      },
-    ],
-    screenshots: [
-      {
-        src: "/Pwa-logos/Logo-v1-white.png",
-        sizes: "1280x720",
-        type: "image/png",
-        form_factor: "wide",
-      },
-      {
-        src: "/Pwa-logos/Logo-v1-white.png",
-        sizes: "1080x1920",
-        type: "image/png",
-        form_factor: "narrow",
       },
     ],
   };

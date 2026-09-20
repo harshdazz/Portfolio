@@ -50,9 +50,13 @@ The contact form won't send emails without these.
 
 When updating content, **always edit these files** — never hardcode content in components.
 
-**Component structure** — section components in `src/app/components/`. Each section imports from the relevant data file in `utils/Data/`.
+**Component structure** — section components live in `src/app/components/<section>/<Name>.tsx`. Each section imports from the relevant data file in `utils/Data/`.
 
-**UI primitives** — shadcn/ui components in `src/components/ui/`. Helper components (`GlowCard`, `AnimationLottie`) in `src/app/components/helper/`.
+> Never name a section component `page.tsx` inside `src/app/` — the App Router would turn it into a public route.
+
+Most sections are **server components**. Only four things are client components: `Navbar`, `SectionReveal`, `RotatingDesignation`, `ProjectCard` and `ContactForm`.
+
+**UI primitives** — shadcn/ui components in `src/components/ui/`.
 
 ---
 
@@ -60,13 +64,12 @@ When updating content, **always edit these files** — never hardcode content in
 
 - Next.js 15, React 18, TypeScript
 - Tailwind CSS, shadcn/ui
-- GSAP + ScrollTrigger (`SectionReveal` scroll-reveal animations)
-- Lottie (`AnimationLottie` helper) for section illustrations
-- EmailJS (client-side contact form, no backend)
-- PWA via `@ducanh2912/next-pwa` (configured in `next.config.ts`)
+- **No animation libraries.** All motion is CSS: `.reveal` (driven by `SectionReveal`'s IntersectionObserver), `.animate-intro-*` for the hero, `.designation-char` for the rotating title, and `.marquee` for the skills/integrations rows. Keep it that way — do not reintroduce GSAP, Lottie, tilt or particle effects.
+- EmailJS, dynamically imported on submit so it stays out of the initial bundle
+- Web app manifest at `src/app/manifest.ts` (icons in `public/icons/`)
 - No backend — fully static, no API routes. `utils/check-email.ts` is a client-side email format validator.
 
-**Contact form variants** — `src/app/components/contact/index.tsx` uses Google reCAPTCHA v3. `contact-without-captcha.tsx` is an alternate version without it.
+**Images** — everything in `public/` is WebP and served through `next/image`. Always pass `sizes`, and only use `priority` for above-the-fold images.
 
 ---
 

@@ -1,6 +1,6 @@
 # Harsh Dubey — AI Full Stack Developer Portfolio
 
-A modern, fully responsive developer portfolio built with **Next.js 15**, **TypeScript**, and **Tailwind CSS** — designed to showcase my work as an AI-powered Full Stack Developer. Features smooth GSAP animations, a dual-marquee tech stack & integrations showcase, and a live contact form.
+A modern, fully responsive developer portfolio built with **Next.js 15**, **TypeScript**, and **Tailwind CSS** — designed to showcase my work as an AI-powered Full Stack Developer. Zero animation libraries — every motion is CSS-driven, so the page stays fast on low-end phones. Features a dual-marquee tech stack & integrations showcase and a live contact form.
 
 ---
 
@@ -15,7 +15,7 @@ A modern, fully responsive developer portfolio built with **Next.js 15**, **Type
 | Section          | Description                                                          |
 | ---------------- | -------------------------------------------------------------------- |
 | **Hero**         | Animated intro with rotating designation titles                      |
-| **About**        | Bio, stats, and profile with scroll-triggered animations             |
+| **About**        | Bio, stats, and profile with scroll-reveal animations                |
 | **Experience**   | Work history with timeline layout                                    |
 | **Tech Stack**   | Scrolling marquee of all technologies with brand icons               |
 | **Integrations** | AI & automation tool integrations (Slack, n8n, Claude, Zapier, etc.) |
@@ -26,16 +26,16 @@ A modern, fully responsive developer portfolio built with **Next.js 15**, **Type
 
 ## 🛠 Tech Stack
 
-| Category         | Tools                                  |
-| ---------------- | -------------------------------------- |
-| **Framework**    | Next.js 15 (App Router)                |
-| **Language**     | TypeScript                             |
-| **Styling**      | Tailwind CSS                           |
-| **Animations**   | GSAP, ScrollTrigger, SplitText, Lottie |
-| **Contact**      | EmailJS (no backend required)          |
-| **Icons**        | React Icons, Lucide                    |
-| **Code Quality** | ESLint, Prettier, Husky + lint-staged  |
-| **Deployment**   | Vercel                                 |
+| Category         | Tools                                 |
+| ---------------- | ------------------------------------- |
+| **Framework**    | Next.js 15 (App Router)               |
+| **Language**     | TypeScript                            |
+| **Styling**      | Tailwind CSS                          |
+| **Animations**   | CSS keyframes + IntersectionObserver  |
+| **Contact**      | EmailJS (no backend required)         |
+| **Icons**        | React Icons, Lucide                   |
+| **Code Quality** | ESLint, Prettier, Husky + lint-staged |
+| **Deployment**   | Vercel                                |
 
 ---
 
@@ -74,7 +74,7 @@ The contact form won't send emails without these. Get them free at [emailjs.com]
 ## 📁 Project Structure
 
 ```
-├── public/                  # Static assets (images, lottie, SVGs)
+├── public/                  # Static assets (WebP images, PWA icons)
 ├── src/
 │   └── app/
 │       ├── components/      # All section components
