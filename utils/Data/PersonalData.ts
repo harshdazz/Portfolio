@@ -15,5 +15,5 @@ export const personalData = {
   stackOverflow: "",
   devUsername: "harshdazz",
   leetcode: "",
-  resume: "",
+  resume: "/Harsh_Dubey_Resume.pdf",
 };

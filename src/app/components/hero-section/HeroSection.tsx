@@ -120,14 +120,15 @@ const HeroSection = () => {
               </Link>
 
               {personalData.resume && (
-                <Link
+                // Plain <a> rather than next/link: this is a static file, not a route.
+                <a
                   href={personalData.resume}
-                  target="_blank"
+                  download="Harsh_Dubey_Resume.pdf"
                   className="group px-8 py-4 rounded-2xl border border-white/10 bg-white/5 text-white font-bold uppercase tracking-wider transition-colors hover:bg-white/10 hover:border-red-500/50 flex items-center gap-2"
                 >
-                  Get Resume{" "}
+                  Download Resume{" "}
                   <MdDownload className="group-hover:translate-y-1 transition-transform" />
-                </Link>
+                </a>
               )}
             </div>
           </div>
