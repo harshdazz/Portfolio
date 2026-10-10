@@ -2,9 +2,9 @@ import { personalData } from "@/../utils/Data/PersonalData";
 import Link from "next/link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaTwitterSquare } from "react-icons/fa";
-import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
+import ResumeViewer from "./ResumeViewer";
 
 const socials = [
   { href: personalData.github, Icon: BsGithub, label: "GitHub" },
@@ -120,15 +120,10 @@ const HeroSection = () => {
               </Link>
 
               {personalData.resume && (
-                // Plain <a> rather than next/link: this is a static file, not a route.
-                <a
-                  href={personalData.resume}
-                  download="Harsh_Dubey_Resume.pdf"
-                  className="group px-8 py-4 rounded-2xl border border-white/10 bg-white/5 text-white font-bold uppercase tracking-wider transition-colors hover:bg-white/10 hover:border-red-500/50 flex items-center gap-2"
-                >
-                  Download Resume{" "}
-                  <MdDownload className="group-hover:translate-y-1 transition-transform" />
-                </a>
+                <ResumeViewer
+                  src={personalData.resume}
+                  fileName="Harsh_Dubey_Resume.pdf"
+                />
               )}
             </div>
           </div>

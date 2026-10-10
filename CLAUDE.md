@@ -54,7 +54,7 @@ When updating content, **always edit these files** — never hardcode content in
 
 > Never name a section component `page.tsx` inside `src/app/` — the App Router would turn it into a public route.
 
-Most sections are **server components**. Only four things are client components: `Navbar`, `SectionReveal`, `RotatingDesignation`, `ProjectCard` and `ContactForm`.
+Most sections are **server components**. Only these are client components: `Navbar`, `SectionReveal`, `RotatingDesignation`, `ProjectCard`, `ContactForm` and `ResumeViewer` (hero's View/Download resume, a native `<dialog>` that only loads the PDF when opened).
 
 **UI primitives** — shadcn/ui components in `src/components/ui/`.
 
