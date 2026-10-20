@@ -1,7 +1,5 @@
 import { experiences } from "@/../utils/Data/experience";
-import { BsPersonWorkspace } from "react-icons/bs";
-import { Calendar, Building2, ChevronRight } from "lucide-react";
-import SectionReveal from "../SectionReveal";
+import { Calendar, Building2 } from "lucide-react";
 
 function Experience() {
   return (
@@ -10,7 +8,7 @@ function Experience() {
       className="relative z-10 py-16 lg:py-24 overflow-hidden"
     >
       {/* Static decorative glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-600/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-600/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="flex justify-center mb-12 lg:mb-16">
         <div className="flex items-center">
@@ -22,74 +20,66 @@ function Experience() {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 relative">
-        {/* Central Timeline Line */}
-        <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-red-600 via-red-950 to-transparent opacity-30" />
+      <div className="max-w-5xl mx-auto px-4 relative flex flex-col gap-10">
+        {experiences.map((exp) => (
+          <article
+            key={exp.id}
+            className="relative p-6 sm:p-8 lg:p-10 rounded-3xl border border-white/10 bg-white/[0.02] overflow-hidden"
+          >
+            {/* Decorative Accent */}
+            <div className="absolute w-1 h-16 bg-gradient-to-b from-red-600 to-transparent left-0 top-10 rounded-full" />
 
-        <div className="flex flex-col gap-16 lg:gap-24">
-          {experiences.map((exp, index) => (
-            <div key={exp.id} className="relative">
-              <SectionReveal direction={index % 2 === 0 ? "right" : "left"}>
-                <div
-                  className={`flex flex-col md:flex-row items-center gap-8 ${
-                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                  }`}
-                >
-                  {/* Timeline Dot */}
-                  <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 w-10 h-10 rounded-xl bg-[#030014] border-2 border-red-600 flex items-center justify-center z-10 shadow-[0_0_15px_rgba(220,38,38,0.5)]">
-                    <BsPersonWorkspace className="text-red-600 w-5 h-5" />
-                  </div>
-
-                  {/* Date Badge */}
-                  <div
-                    className={`w-full md:w-1/2 flex ${
-                      index % 2 === 0 ? "md:justify-end" : "md:justify-start"
-                    }`}
-                  >
-                    <div className="bg-white/5 border border-white/10 px-4 py-2 rounded-full flex items-center gap-2 text-slate-400 text-sm font-medium">
-                      <Calendar className="w-4 h-4 text-red-600" />
-                      {exp.duration}
-                    </div>
-                  </div>
-
-                  {/* Content Card */}
-                  <div className="w-full md:w-1/2">
-                    <div className="group relative p-8 rounded-3xl border border-white/10 bg-white/[0.02] hover:border-red-600/50 transition-colors duration-300 shadow-xl">
-                      <div className="flex flex-col gap-4">
-                        <div className="flex flex-col gap-1">
-                          <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
-                            {exp.title}
-                          </h3>
-                          <div className="flex items-center gap-2 text-red-500 font-semibold">
-                            <Building2 className="w-4 h-4" />
-                            {exp.company}
-                          </div>
-                        </div>
-
-                        <div className="space-y-3 mt-2">
-                          {exp.details?.map((detail, idx) => (
-                            <div
-                              key={idx}
-                              className="flex gap-3 items-start group/item"
-                            >
-                              <ChevronRight className="w-4 h-4 text-red-600 mt-1 shrink-0 group-hover/item:translate-x-1 transition-transform" />
-                              <p className="text-slate-400 text-sm lg:text-base leading-relaxed group-hover/item:text-slate-200 transition-colors">
-                                {detail}
-                              </p>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Hover glow */}
-                      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-red-600/20 via-transparent to-red-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                    </div>
-                  </div>
+            <header className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 shrink-0 rounded-xl bg-red-500/10 border border-red-600/20 flex items-center justify-center">
+                  <Building2 className="w-5 h-5 text-red-500" />
                 </div>
-              </SectionReveal>
+                <div>
+                  <h3 className="text-xl lg:text-2xl font-bold text-white">
+                    {exp.title}
+                  </h3>
+                  <p className="text-red-500 font-semibold">{exp.company}</p>
+                </div>
+              </div>
+
+              <div className="w-fit shrink-0 bg-white/5 border border-white/10 px-4 py-2 rounded-full flex items-center gap-2 text-slate-400 text-sm font-medium">
+                <Calendar className="w-4 h-4 text-red-600" />
+                {exp.duration}
+              </div>
+            </header>
+
+            <p className="mt-6 text-slate-400 leading-relaxed italic">
+              {exp.summary}
+            </p>
+
+            <ul className="mt-8 grid gap-x-10 gap-y-6 md:grid-cols-2">
+              {exp.highlights.map((item) => (
+                <li
+                  key={item.title}
+                  className="border-l-2 border-white/10 pl-4 hover:border-red-600 transition-colors duration-300"
+                >
+                  <h4 className="text-white font-semibold text-sm lg:text-base">
+                    {item.title}
+                  </h4>
+                  <p className="mt-1 text-slate-400 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-8 pt-6 border-t border-white/5 flex flex-wrap gap-2">
+              {exp.stack.map((tech) => (
+                <span
+                  key={tech}
+                  className="px-3 py-1 text-[11px] font-bold bg-white/5 border border-white/10 text-slate-400 rounded-lg"
+                >
+                  {tech}
+                </span>
+              ))}
             </div>
-          ))}
-        </div>
+          </article>
+        ))}
       </div>
     </div>
   );
