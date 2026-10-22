@@ -47,6 +47,7 @@ The contact form won't send emails without these.
 - `experience.ts` — work experience
 - `educations.ts` — education history
 - `skills.ts` — flat list of skills for the skills section
+- `routelens-data.ts` — copy for the RouteLens demo page (demo steps, features, install steps, FAQ)
 
 When updating content, **always edit these files** — never hardcode content in components.
 
@@ -54,7 +55,9 @@ When updating content, **always edit these files** — never hardcode content in
 
 > Never name a section component `page.tsx` inside `src/app/` — the App Router would turn it into a public route.
 
-Most sections are **server components**. Only these are client components: `Navbar`, `SectionReveal`, `RotatingDesignation`, `ProjectCard`, `ContactForm` and `ResumeViewer` (hero's View/Download resume, a native `<dialog>` that only loads the PDF when opened).
+Most sections are **server components**. Only these are client components: `Navbar`, `SectionReveal`, `RotatingDesignation`, `ProjectCard`, `ContactForm`, `ResumeViewer` (hero's View/Download resume, a native `<dialog>` that only loads the PDF when opened) and `RouteLensDemo` (the guided demo on `/routelens`).
+
+**Project demo pages** — `/routelens` (`src/app/routelens/page.tsx`, sections in `src/app/components/routelens/`) is the RouteLens product and install page. A project's `demo` field can be an internal path like this; internal links open in the same tab, external ones in a new tab.
 
 **UI primitives** — shadcn/ui components in `src/components/ui/`.
 
