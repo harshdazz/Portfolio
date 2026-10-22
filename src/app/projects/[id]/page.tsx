@@ -103,7 +103,12 @@ const ProjectDetails = async ({ params }: Props) => {
 
               <div className="flex flex-wrap gap-4 mt-4">
                 {project.demo && (
-                  <Link href={project.demo} target="_blank">
+                  <Link
+                    href={project.demo}
+                    target={
+                      /^https?:\/\//.test(project.demo) ? "_blank" : undefined
+                    }
+                  >
                     <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg shadow-red-600/20 transition-all hover:scale-105 active:scale-95 flex gap-2 font-bold uppercase tracking-widest">
                       <Globe className="w-5 h-5" />
                       Live Preview

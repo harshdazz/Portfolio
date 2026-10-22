@@ -175,11 +175,14 @@ const ProjectLinkButton = ({
     );
   }
 
+  // Internal pages (like a project's demo page) stay in the same tab.
+  const isExternal = /^https?:\/\//.test(href);
+
   return (
     <Link
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
       className="flex-1"
     >
       <Button

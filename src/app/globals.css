@@ -148,6 +148,63 @@
   animation-play-state: paused;
 }
 
+/* ── RouteLens demo page ── */
+@keyframes rl-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes rl-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.55);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(251, 191, 36, 0);
+  }
+}
+
+@keyframes rl-shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+/* Fills the active step's bar while the demo plays. */
+.rl-progress {
+  transform-origin: left;
+  animation: rl-progress var(--rl-step-ms, 5000ms) linear forwards;
+}
+
+/* Pops a demo element in; stagger with --rl-delay. */
+.rl-pop {
+  opacity: 0;
+  animation: fade-in-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: var(--rl-delay, 0s);
+}
+
+.rl-pulse {
+  animation: rl-pulse 1.6s ease-out infinite;
+}
+
+.rl-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.14) 50%,
+    rgba(255, 255, 255, 0.05) 75%
+  );
+  background-size: 200% 100%;
+  animation: rl-shimmer 1.8s linear infinite;
+}
+
 /* ── Resume viewer dialog ── */
 html:has(dialog[open]) {
   overflow: hidden;
@@ -173,7 +230,15 @@ html:has(dialog[open]) {
   }
 
   .marquee,
-  .resume-dialog[open] {
+  .resume-dialog[open],
+  .rl-progress,
+  .rl-pulse,
+  .rl-shimmer {
+    animation: none !important;
+  }
+
+  .rl-pop {
+    opacity: 1 !important;
     animation: none !important;
   }
 }
