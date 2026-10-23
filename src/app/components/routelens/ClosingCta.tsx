@@ -56,7 +56,9 @@ const ClosingCta = () => (
       </p>
       <div className="relative mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
         <a
-          href="#install"
+          href={routeLensLinks.marketplace}
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-300 to-orange-500 px-7 py-3.5 text-sm font-bold uppercase tracking-widest text-[#1a0d00] transition-transform hover:scale-105 active:scale-95"
         >
           <Download className="w-4 h-4" /> Install RouteLens

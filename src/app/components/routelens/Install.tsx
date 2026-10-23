@@ -1,9 +1,10 @@
 import {
   routeLensInstallSteps,
   routeLensLinks,
+  routeLensNpmCommands,
   routeLensRequirements,
 } from "@/../utils/Data/routelens-data";
-import { Bot, Check, Download, Sparkles } from "lucide-react";
+import { ArrowRight, Bot, Check, Download, Terminal } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 
 const Install = () => (
@@ -11,7 +12,7 @@ const Install = () => (
     <SectionHeading
       eyebrow="Install"
       title="Up and running in two minutes"
-      subtitle="RouteLens is in early preview. It's coming to the VS Code Marketplace soon. Until then, you install it from a file in a few clicks."
+      subtitle="RouteLens is on the VS Code Marketplace. Install it in one click, open your project and test every route."
     />
 
     <div className="mt-12 grid gap-8 lg:grid-cols-12">
@@ -31,12 +32,12 @@ const Install = () => (
               </p>
               {index === 0 && (
                 <a
-                  href={routeLensLinks.releases}
+                  href={routeLensLinks.marketplace}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-4 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-300 to-orange-500 px-5 py-2.5 text-xs font-bold uppercase tracking-widest text-[#1a0d00] transition-transform hover:scale-105 active:scale-95"
                 >
-                  <Download className="w-4 h-4" /> Open the releases page
+                  <Download className="w-4 h-4" /> Get it on the Marketplace
                 </a>
               )}
             </div>
@@ -72,6 +73,31 @@ const Install = () => (
 
         <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
           <h3 className="flex items-center gap-2 text-lg font-bold text-white">
+            <Download className="w-5 h-5 text-teal-300" /> Using Cursor or
+            VSCodium?
+          </h3>
+          <p className="mt-2 text-sm leading-relaxed text-slate-400">
+            Download the latest{" "}
+            <span className="font-semibold text-slate-200">.vsix</span> file
+            from GitHub, then choose{" "}
+            <span className="font-semibold text-slate-200">
+              Install from VSIX…
+            </span>{" "}
+            in the Extensions panel&apos;s ⋯ menu. A listing on Open VSX, the
+            store they use, is on its way.
+          </p>
+          <a
+            href={routeLensLinks.releases}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-amber-300 hover:text-amber-200 transition-colors"
+          >
+            Open the releases page <ArrowRight className="w-4 h-4" />
+          </a>
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
+          <h3 className="flex items-center gap-2 text-lg font-bold text-white">
             <Bot className="w-5 h-5 text-violet-300" /> Want your AI to help?
           </h3>
           <p className="mt-2 text-sm leading-relaxed text-slate-400">
@@ -83,15 +109,23 @@ const Install = () => (
             . Then ask it to test your API.
           </p>
         </div>
-
-        <div className="flex items-start gap-3 rounded-2xl border border-amber-400/20 bg-amber-400/[0.05] p-6">
-          <Sparkles className="w-5 h-5 shrink-0 text-amber-300 mt-0.5" />
-          <p className="text-sm leading-relaxed text-slate-300">
-            <span className="font-bold text-white">Coming soon:</span> one-click
-            install from the VS Code Marketplace.
-          </p>
-        </div>
       </aside>
+
+      <div className="lg:col-span-12 rounded-2xl border border-amber-400/20 bg-amber-400/[0.05] p-6">
+        <h3 className="flex items-center gap-2 text-lg font-bold text-white">
+          <Terminal className="w-5 h-5 text-amber-300" /> Also on npm
+        </h3>
+        <ul className="mt-4 grid gap-4 sm:grid-cols-2">
+          {routeLensNpmCommands.map((item) => (
+            <li key={item.command}>
+              <p className="text-sm text-slate-400">{item.label}</p>
+              <code className="mt-1.5 block overflow-x-auto whitespace-nowrap rounded-lg border border-white/10 bg-black/30 px-3 py-2 font-mono text-xs text-slate-200">
+                {item.command}
+              </code>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   </section>
 );

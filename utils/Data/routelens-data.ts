@@ -1,6 +1,8 @@
 /** Content for the RouteLens demo page (/routelens). */
 
 export const routeLensLinks = {
+  marketplace:
+    "https://marketplace.visualstudio.com/items?itemName=harshdazz.routelens-api-client",
   github: "https://github.com/harshdazz/routelens",
   releases: "https://github.com/harshdazz/routelens/releases",
 };
@@ -144,12 +146,8 @@ export const routeLensFeatures = [
 
 export const routeLensInstallSteps = [
   {
-    title: "Download RouteLens",
-    text: "Open the RouteLens releases page on GitHub and download the latest file that ends in .vsix.",
-  },
-  {
-    title: "Add it to VS Code",
-    text: "In VS Code, open the Extensions panel, click the ⋯ menu at the top, choose “Install from VSIX…” and pick the file you downloaded.",
+    title: "Install it from the Marketplace",
+    text: "In VS Code, open the Extensions panel, search for “RouteLens API Client” by harshdazz and click Install. Or open its Marketplace page and install it from there.",
   },
   {
     title: "Open your project",
@@ -165,6 +163,18 @@ export const routeLensRequirements = [
   "VS Code 1.95 or newer",
   "A Next.js or Express project",
   "Windows, macOS or Linux",
+];
+
+/** The CLI and the MCP server, published on npm next to the extension. */
+export const routeLensNpmCommands = [
+  {
+    label: "Run your saved tests in a terminal or CI",
+    command: "npx @routelens/cli run",
+  },
+  {
+    label: "Give any MCP agent the RouteLens tools",
+    command: "npx -y @routelens/mcp --root .",
+  },
 ];
 
 export const routeLensFaq = [
@@ -199,8 +209,8 @@ export const routeLensFaq = [
       "RouteLens itself never edits your code. It keeps its own files in a .routelens folder in your project, which you can share with your team. Code changes only happen when you, or an AI assistant you asked, make them.",
   },
   {
-    question: "Why isn't it on the VS Code Marketplace yet?",
+    question: "Can I use it in Cursor or VSCodium?",
     answer:
-      "RouteLens is in early preview. The Marketplace release is the next step on the roadmap. Until then, installing it from the downloaded file takes about a minute.",
+      "Yes. Download the latest routelens-api-client .vsix file from the GitHub releases page. Then open the Extensions panel, click the ⋯ menu at the top, choose “Install from VSIX…” and pick the file. A listing on Open VSX, the store Cursor and VSCodium use, is on its way.",
   },
 ];
