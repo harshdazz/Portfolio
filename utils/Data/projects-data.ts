@@ -21,6 +21,7 @@ export const projectsData = [
     images: ["/projects/routelens.webp"],
     videos: [""],
     highlights: [
+      "On the VS Code Marketplace as RouteLens API Client and on npm, shipped by a tag-triggered, approval-gated CI pipeline.",
       "Finds every route across files with the TypeScript parser, without ever running the code.",
       "Builds sample request bodies that pass each route's zod schema.",
       "Test everything in one click, re-runs on save, multi-step flows and automatic login.",
