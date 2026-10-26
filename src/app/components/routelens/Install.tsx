@@ -77,22 +77,19 @@ const Install = () => (
             VSCodium?
           </h3>
           <p className="mt-2 text-sm leading-relaxed text-slate-400">
-            Download the latest{" "}
-            <span className="font-semibold text-slate-200">.vsix</span> file
-            from GitHub, then choose{" "}
+            RouteLens is on Open VSX, the store they use. Search for{" "}
             <span className="font-semibold text-slate-200">
-              Install from VSIX…
+              RouteLens API Client
             </span>{" "}
-            in the Extensions panel&apos;s ⋯ menu. A listing on Open VSX, the
-            store they use, is on its way.
+            in the Extensions panel and click Install.
           </p>
           <a
-            href={routeLensLinks.releases}
+            href={routeLensLinks.openVsx}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-amber-300 hover:text-amber-200 transition-colors"
           >
-            Open the releases page <ArrowRight className="w-4 h-4" />
+            Get it on Open VSX <ArrowRight className="w-4 h-4" />
           </a>
         </div>
 
