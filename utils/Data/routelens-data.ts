@@ -3,8 +3,8 @@
 export const routeLensLinks = {
   marketplace:
     "https://marketplace.visualstudio.com/items?itemName=harshdazz.routelens-api-client",
+  openVsx: "https://open-vsx.org/extension/harshdazz/routelens-api-client",
   github: "https://github.com/harshdazz/routelens",
-  releases: "https://github.com/harshdazz/routelens/releases",
 };
 
 export const routeLensSectionNav = [
@@ -211,6 +211,6 @@ export const routeLensFaq = [
   {
     question: "Can I use it in Cursor or VSCodium?",
     answer:
-      "Yes. Download the latest routelens-api-client .vsix file from the GitHub releases page. Then open the Extensions panel, click the ⋯ menu at the top, choose “Install from VSIX…” and pick the file. A listing on Open VSX, the store Cursor and VSCodium use, is on its way.",
+      "Yes. RouteLens is on Open VSX, the store Cursor and VSCodium use. Open the Extensions panel, search for “RouteLens API Client” and click Install. If your editor doesn't use Open VSX, download the latest .vsix file from the GitHub releases page, click the ⋯ menu at the top of the Extensions panel and choose “Install from VSIX…”.",
   },
 ];
