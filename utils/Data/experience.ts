@@ -5,7 +5,7 @@ export const experiences = [
     company: "BNCW Enterprises",
     duration: "Sep 2025 – Sep 2026",
     summary:
-      "Full-stack contributor on a Next.js and FastAPI platform serving an LLM-powered product, owning frontend surfaces while shipping backend endpoints, integrations, and RAG pipeline work.",
+      "Worked across the Next.js frontend, FastAPI backend and RAG chatbot service of an AI stock research platform: 200+ Jira tickets and 400+ merged PRs.",
     highlights: [
       {
         title: "AI Chat Feature, End to End",
@@ -58,6 +58,8 @@ export const experiences = [
       "Redux Toolkit",
       "Tailwind CSS",
       "AWS S3 / SES",
+      "Redis",
+      "Docker",
       "pytest",
       "Vitest",
     ],
