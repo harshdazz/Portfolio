@@ -22,12 +22,35 @@ import {
   SiLangchain,
   SiPostman,
   SiFreelancer,
+  SiPython,
+  SiFastapi,
+  SiPostgresql,
+  SiMongodb,
+  SiRedis,
+  SiRedux,
+  SiAmazonwebservices,
+  SiGithubactions,
+  SiClaude,
+  SiGooglegemini,
 } from "react-icons/si";
+import { TbPlugConnected } from "react-icons/tb";
 import { IconType } from "react-icons";
 
 export const getSkillIcon = (skill: string): IconType => {
   const s = skill.toLowerCase();
 
+  // Specific names first: "GitHub Actions" would match "git", "FastAPI" would match "api".
+  if (s.includes("github actions")) return SiGithubactions;
+  if (s.includes("fastapi")) return SiFastapi;
+  if (s.includes("python")) return SiPython;
+  if (s.includes("postgres")) return SiPostgresql;
+  if (s.includes("mongo")) return SiMongodb;
+  if (s.includes("redis")) return SiRedis;
+  if (s.includes("redux")) return SiRedux;
+  if (s === "aws") return SiAmazonwebservices;
+  if (s.includes("claude")) return SiClaude;
+  if (s.includes("gemini")) return SiGooglegemini;
+  if (s === "mcp") return TbPlugConnected;
   if (s.includes("html")) return SiHtml5;
   if (s.includes("css") && !s.includes("tailwind")) return SiCss3;
   if (s.includes("tailwind")) return SiTailwindcss;
@@ -57,6 +80,17 @@ export const getSkillIcon = (skill: string): IconType => {
 export const getSkillColor = (skill: string): string => {
   const s = skill.toLowerCase();
 
+  if (s.includes("github actions")) return "#2088FF";
+  if (s.includes("fastapi")) return "#009688";
+  if (s.includes("python")) return "#3776AB";
+  if (s.includes("postgres")) return "#4169E1";
+  if (s.includes("mongo")) return "#47A248";
+  if (s.includes("redis")) return "#FF4438";
+  if (s.includes("redux")) return "#764ABC";
+  if (s === "aws") return "#FF9900";
+  if (s.includes("claude")) return "#D97757";
+  if (s.includes("gemini")) return "#8E75B2";
+  if (s === "mcp") return "#ffffff";
   if (s.includes("html")) return "#E34F26";
   if (s.includes("css") && !s.includes("tailwind")) return "#1572B6";
   if (s.includes("tailwind")) return "#06B6D4";
